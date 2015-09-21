@@ -1,0 +1,69 @@
+<html>
+<head>
+  <title>Random Rhythm Generator</title>
+  <link rel="stylesheet" type="text/css" href="site.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+function gen(note) {
+  var elem = $("<div />", {"class": "note " + note});
+  $("#notes").append(elem);
+}
+
+function randomNotes() {
+  $("#notes").html("");
+  var time = parseInt($("#time").val());
+  var time_sig;
+
+  console.log(typeof time);
+
+  switch (time) {
+    case 2:
+      console.log("woo");
+      time_sig = "two-four";
+      break;
+    case 3:
+      console.log("woo");
+      time_sig = "three-four";
+      break;
+    case 4:
+      console.log("woo");
+      time_sig = "four-four";
+      break;
+    case 5:
+      console.log("woo");
+      time_sig = "five-four";
+      break;
+  }
+
+  $("#notes").append($("<div />", {"class": "note " + time_sig}));
+
+  var notes = ["quarter", "eighth", "eigth-triplet", "sixteenth", "half"]
+  for (counts = 0; counts < time * 4; counts++) {
+    var note = notes[Math.floor(Math.random() * notes.length)];
+    if (note === "half" && counts % time === time - 1) note = "quarter";
+    gen(note);
+
+    if (note === "half") counts++;
+
+    if (counts % time === time - 1) gen("bar");
+  }
+}
+
+$().ready(function() {
+  randomNotes();
+});
+  </script>
+</head>
+
+<body>
+  <select id="time">
+    <option value="5">5/4</option>
+    <option value="4" selected>4/4</option>
+    <option value="3">3/4</option>
+    <option value="2">2/4</option>
+  </select>
+  <input type="button" onclick="randomNotes();" value="Generate" />
+  <div class="main" id="notes"></div>
+</body>
+</html>

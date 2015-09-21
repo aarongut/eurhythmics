@@ -1,0 +1,68 @@
+div.main {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	flex-direction: row;
+
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	flex-flow: row wrap;
+
+	border: 1px solid #000;
+}
+
+.note {
+	height: 220px;
+	background-color: #fff;
+}
+
+.half {
+	width: 99px;
+	background-image: url("2.png");
+}
+
+.quarter {
+	width: 74px;
+	background-image: url("4.png");
+}
+
+.eighth {
+	width: 160px;
+	background-image: url("8.png");
+}
+
+.eigth-triplet {
+	width: 200px;
+	background-image: url("8-3.png");
+}
+
+.sixteenth {
+	width: 220px;
+	background-image: url("16.png");
+}
+
+.bar {
+	width: 40px;
+	background-image: url("bar.png");
+}
+
+.four-four {
+	width: 97px;
+	background-image: url("4_4.png");
+}
+
+.five-four {
+	width: 96px;
+	background-image: url("5_4.png");
+}
+.three-four {
+	width: 97px;
+	background-image: url("3_4.png");
+}
+.two-four {
+	width: 98px;
+	background-image: url("2_4.png");
+}
