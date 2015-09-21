@@ -15,54 +15,54 @@ div.main {
 }
 
 .note {
-	height: 220px;
+	height: 80px;
 	background-color: #fff;
 }
 
 .half {
-	width: 99px;
+	width: 36px;
 	background-image: url("2.png");
 }
 
 .quarter {
-	width: 74px;
+	width: 27px;
 	background-image: url("4.png");
 }
 
 .eighth {
-	width: 160px;
+	width: 58px;
 	background-image: url("8.png");
 }
 
 .eigth-triplet {
-	width: 200px;
+	width: 73px;
 	background-image: url("8-3.png");
 }
 
 .sixteenth {
-	width: 220px;
+	width: 80px;
 	background-image: url("16.png");
 }
 
 .bar {
-	width: 40px;
+	width: 15px;
 	background-image: url("bar.png");
 }
 
 .four-four {
-	width: 97px;
+	width: 35px;
 	background-image: url("4_4.png");
 }
 
 .five-four {
-	width: 96px;
+	width: 35px;
 	background-image: url("5_4.png");
 }
 .three-four {
-	width: 97px;
+	width: 25px;
 	background-image: url("3_4.png");
 }
 .two-four {
-	width: 98px;
+	width: 36px;
 	background-image: url("2_4.png");
 }
