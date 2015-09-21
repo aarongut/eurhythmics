@@ -15,36 +15,37 @@ function randomNotes() {
   var time = parseInt($("#time").val());
   var time_sig;
 
-  console.log(typeof time);
-
   switch (time) {
     case 2:
-      console.log("woo");
       time_sig = "two-four";
       break;
     case 3:
-      console.log("woo");
       time_sig = "three-four";
       break;
     case 4:
-      console.log("woo");
       time_sig = "four-four";
       break;
     case 5:
-      console.log("woo");
       time_sig = "five-four";
       break;
   }
 
   $("#notes").append($("<div />", {"class": "note " + time_sig}));
 
-  var notes = ["quarter", "eighth", "eigth-triplet", "sixteenth", "half"]
+  var one = ["quarter", "eighth", "eighth-triplet", "sixteenth"];
+  var two = ["half", "eighth-dot-quarter", "dot-quarter-eighth", "eighth-quarter-eighth"];
+  var notes = one.concat(two);
+
   for (counts = 0; counts < time * 4; counts++) {
-    var note = notes[Math.floor(Math.random() * notes.length)];
-    if (note === "half" && counts % time === time - 1) note = "quarter";
+    var note;
+    if (counts % time !== time - 1)
+      note = notes[Math.floor(Math.random() * notes.length)];
+    else
+      note = one[Math.floor(Math.random() * one.length)];
+
     gen(note);
 
-    if (note === "half") counts++;
+    if (two.indexOf(note) >= 0) counts++;
 
     if (counts % time === time - 1) gen("bar");
   }

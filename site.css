@@ -12,6 +12,7 @@ div.main {
 	flex-flow: row wrap;
 
 	border: 1px solid #000;
+	margin: 10px;
 }
 
 .note {
@@ -34,7 +35,7 @@ div.main {
 	background-image: url("8.png");
 }
 
-.eigth-triplet {
+.eighth-triplet {
 	width: 73px;
 	background-image: url("8-3.png");
 }
@@ -42,6 +43,21 @@ div.main {
 .sixteenth {
 	width: 80px;
 	background-image: url("16.png");
+}
+
+.eighth-quarter-eighth {
+	width: 102px;
+	background-image: url("8-4-8.png");
+}
+
+.eighth-dot-quarter {
+	width: 81px;
+	background-image: url("8-d4.png");
+}
+
+.dot-quarter-eighth {
+	width: 80px;
+	background-image: url("d4-8.png");
 }
 
 .bar {
